@@ -168,6 +168,11 @@ $$\text{evidence}_i = \sum_j W_{i,~ j} x_j + b_i$$
 
 where \\(W_i\\) is the weights and \\(b_i\\) is the bias for class \\(i\\),
 and \\(j\\) is an index for summing over the pixels in our input image \\(x\\).
+
+So 
+$$\text{evidence}_5 = \sum_j W_{5,~ j} x_j + b_5$$
+defines the evidence of the image $$x$$ being a "5" as the sum over all pixels $$x_j$$ of the image x multiplied by the globally defined weight for being a 5 for that pixel. A global bias $$b_5$$ is added to the overall evidence. This bias is the same number for each image.
+
 We then convert the evidence tallies into our predicted probabilities
 \\(y\\) using the "softmax" function:
 
